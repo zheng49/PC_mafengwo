@@ -1,0 +1,21 @@
+<!--pages/shopList/shopList.wxml-->
+<!--完整商品项目-->
+<view class="shop" wx:for="{{shopList}}" wx:key="id">
+       <image bindtap='showDetail' data-tid="{{item.id}}" class="shop-img" src="{{item.sm_url}}"></image>
+       <view class="shop-info">
+          <text class="shop-title ell">{{item.title}}</text>
+          <text class="shop-tel">电话:{{item.tel}}</text>
+          <text class="shop-address">地址:{{item.address}}</text>
+          <text class="shop-time">营业时间:{{item.time}}</text>
+       </view>
+       <view class="shop-star">
+          <view class="star-after">★★★★★</view>
+          <view class="star-before" style="width:{{item.score}}%">★★★★★</view>
+       </view> 
+</view>
+<view class="loadmore loading"
+wx:if="{{hasMore}}">正在加载...</view>
+<view class="loadmore">己经没有更多的数据了</view>
+
+
+

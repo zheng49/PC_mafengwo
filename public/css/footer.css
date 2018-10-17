@@ -1,0 +1,137 @@
+.footer{
+    color: #c2c2c2;
+    font-size: 12px;
+    display:block;
+    position: relative;
+    flex: auto;
+}
+.footer>div ul{
+    position: relative;
+}
+.footer a{
+    color: #c2c2c2;
+}
+.footer-info{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px 8px 35px 8px;
+}
+.footer-info li{
+    padding-top:4px ;
+}
+.footer a:hover{
+    color: #fff;
+}
+ .font-mfw{
+    color: #FF9D00;
+}
+.footer ul>li>a.font-mfw:hover{
+    color: #FF9D00;
+}
+.footer>.footer-info>ul:first-child{
+    width: 200px;
+    height: 162px;
+    margin-right: 68px;
+}
+.footer>.footer-info>ul:nth-child(2){
+     height: 162px;
+     margin-right: 85px;
+ }
+.footer>.footer-info>ul:nth-child(3){
+    width: 135px;
+    height: 162px;
+    margin-right: 80px;
+}
+
+
+.footer-info>.float-right{
+    width: 260px;
+    height: 130px;
+    padding-top: 32px;
+}
+span.mfw-ly{
+    /*float: left;*/
+    /*background: url(../image/images/qr_mfw4.gif) no-repeat ;*/
+    width: 94px;
+    height: 90px;
+    margin: 0 0 8px 6px;
+}
+span.mfw-lp{
+    /*float: left;*/
+    /*background: url(../image/images/qr_tejia4.png) no-repeat;*/
+    width: 94px;
+    height: 90px;
+}
+.foot-icon1,.foot-icon2,.foot-icon3{
+    background: url("../image/images/mfw-footer-sprite7.png");
+    display: block;
+    width: 26px;
+    height: 28px;
+    float: left;
+    padding: 15px;
+    margin: 5px;
+}
+.foot-icon{
+    margin: 0 auto;
+    width: 140px;
+}
+.foot-icon2{
+    background-position:25% 0;
+}
+.foot-icon3{
+    background-position:50% 0;
+}
+.foot-links{
+    width: 1000px;
+    margin: 0 auto;
+}
+.foot-links>a{
+    float: left;
+    margin-right: 15px;
+}
+
+
+
+.foot-copyright{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.foot-logo{
+    float: left;
+    width: 136px;
+    height: 39px;
+    background: url("../image/images/mfw-footer-sprite7.png");
+    background-position: 0 20%;
+    margin-right: 25px;
+}
+.foot-copyinfo{
+    margin: 2px auto ;
+    float: left;
+}
+.foot-icon4,.foot-icon5,.foot-icon6{
+    background: url("../image/images/mfw-footer-sprite7.png");
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: -15px;
+}
+.foot-icon4{
+    background-position:0 46%;
+}
+.foot-icon5{
+    background-position:0 73%;
+}
+.foot-icon6{
+    background-position: 0 100%;
+}
+.copy-icon>i{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: auto;
+    background-image: url("../image/picture/police_record.png");
+    background-size: cover;
+}

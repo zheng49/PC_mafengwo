@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/hotel.css"/>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hotel.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<!--网页头部-->
+<div class="header-all">
+    <div id="header" class="clearfix">
+        <div id="logo-1" class="">
+            <a href="index.html"></a>
+        </div>
+        <ul class="list-unstyled">
+            <li class="header-index"><a href="index.html">首页</a></li>
+            <li class=""><a href="">目的地</a></li>
+            <li class=""><a href="strategy.html">旅游攻略</a></li>
+            <li class=""><a href="" class="show1">旅行商城
+                <span class="icon-show"></span></a>
+                <div class="list_group group-one">
+                    <ul class="list-unstyled">
+                        <li><span class="">自由行</span><b class="icon_hot">hot</b></li>
+                        <li>跟团游</li>
+                        <li>当地游</li>
+                        <li><span class="">国内机票<b class="icon_new">new</b></span></li>
+                        <li>签证</li>
+                        <li>保险</li>
+                    </ul>
+                </div></li>
+            <li class=""><a href="hotel.html">酒店</a></li>
+            <li class="for-border"><a href="" class="show2">社区
+                <span class="icon-show"></span></a>
+                <div class="list_group">
+                    <ul class="list-unstyled float-left">
+                        <li>问答<b class="icon_hot">hot</b></li>
+                        <li>马蜂窝周边<b class="icon_new">new</b></li>
+                        <li>蜂首俱乐部</li>
+                        <li>结伴</li>
+                    </ul>
+                    <ul class="list-unstyled float-right">
+                        <li>小组论坛</li>
+                        <li>分舵同城</li>
+                        <li>马蜂窝拍卖行</li>
+                        <li>照片PK</li>
+                        <li>真人兽</li>
+                        <li>道具商店</li>
+                    </ul>
+                </div></li>
+            <li class=""><a href="">APP</a></li>
+            <li class="header-search">
+                <input type="text"/>
+                <span></span>
+            </li>
+        </ul>
+        <div class="float-right log_reg">
+            <div class="">
+                <a href="#"class="qq_login"></a>
+                <a href="#" class="wb_login"></a>
+                <a href="#" class="wc_login"></a>
+                <div class="log_reg float-left mt-1">
+                    <a href="login.html" class="mx-2">登录</a>
+                    <span class="text-secondary">|</span>
+                    <a href="regist.html" class="mx-2">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h4>酒店</h4>
+    <div class="row">
+        <div class="search1 col-md-12 d-flex justify-content-around">
+            <input type="text" class="col-md-4" placeholder="出行目的地"/>
+            <a href="#" class="col-md-2 box-mfw">
+                <b id="date-selector-one">
+                    <div class="date" id="date1">
+                        <div><span><i></i>九月&nbsp;2018</span>
+                            <table class="ui-datepicker-calendar">
+                                <thead>
+                                <tr>
+                                    <th><span>一</span></th>
+                                    <th><span>二</span></th>
+                                    <th><span>三</span></th>
+                                    <th><span>四</span></th>
+                                    <th><span>五</span></th>
+                                    <th><span style="color: #FF9D00">六</span></th>
+                                    <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                                </tbody>
+                            </table></div>
+                        <div><span>十月&nbsp;2018<i></i></span>
+                            <table class="ui-datepicker-calendar">
+                                <thead>
+                                <tr>
+                                    <th><span>一</span></th>
+                                    <th><span>二</span></th>
+                                    <th><span>三</span></th>
+                                    <th><span>四</span></th>
+                                    <th><span>五</span></th>
+                                    <th><span style="color: #FF9D00">六</span></th>
+                                    <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>国庆</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table></div>
+                    </div>
+                </b>
+            </a>
+            <a href="#" class="col-md-2 box-mfw">
+                <b id="date-selector-two">
+                    <div class="date" id="date2">
+                        <div><span><i></i>九月&nbsp;2018</span>
+                            <table class="ui-datepicker-calendar">
+                                <thead>
+                                <tr>
+                                    <th><span>一</span></th>
+                                    <th><span>二</span></th>
+                                    <th><span>三</span></th>
+                                    <th><span>四</span></th>
+                                    <th><span>五</span></th>
+                                    <th><span style="color: #FF9D00">六</span></th>
+                                    <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                                </tbody>
+                            </table></div>
+                        <div><span>十月&nbsp;2018<i></i></span>
+                            <table class="ui-datepicker-calendar">
+                                <thead>
+                                <tr>
+                                    <th><span>一</span></th>
+                                    <th><span>二</span></th>
+                                    <th><span>三</span></th>
+                                    <th><span>四</span></th>
+                                    <th><span>五</span></th>
+                                    <th><span style="color: #FF9D00">六</span></th>
+                                    <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>国庆</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table></div>
+                    </div>
+                </b>
+            </a>
+            <a href="#" class="col-md-2 box-mfw">人数<span id="people-count">
+                <div id="p-count">
+                    <div class="is-adult">
+                        <span>每间</span>
+                        <span class="adult" id="adult">1成人<div><b class="icon-show">
+                        </b></div>
+                            <ul class="list-unstyled select-count1" style="display: none">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                            </ul></span>
+                        <span class="child" id="child">0儿童<div><b class="icon-show"></b></div>
+                            <ul class="list-unstyled select-count2" style="display: none">
+                                <li>0</li>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                            </ul></span>
+                    </div>
+                </div>
+            </span></a>
+            <a href="#" class="search-icon"><i></i></a>
+        </div>
+    </div>
+    <div class="hotel-floor1 row d-flex justify-content-center">
+        <div class="col-md-4">
+            <i></i>
+            <span>住宿攻略</span>
+            <span>区域攻略到特色主题，应有尽有</span>
+        </div>
+        <div class="col-md-4">
+            <i></i>
+            <span>专享价格</span>
+            <span>多平台价格对比，天天专享特惠</span>
+        </div>
+        <div class="col-md-4">
+            <i></i>
+            <span>真实点评</span>
+            <span>超过100万真实用户点评和游记</span>
+        </div>
+    </div>
+    <h4 class="text-center">主题酒店</h4>
+    <div class="hotel-floor2">
+        <ul class="d-flex justify-content-around list-unstyled nav nav-tabs">
+            <li class="nav-item"><a href="#item1" class="nav-link active show" data-toggle="tab">童话小镇</a></li>
+            <li class="nav-item"><a href="#item2" class="nav-link" data-toggle="tab">亲子之选</a></li>
+            <li class="nav-item"><a href="#item3" class="nav-link" data-toggle="tab">超值酒店</a></li>
+            <li class="nav-item"><a href="#item4" class="nav-link" data-toggle="tab">设计酒店</a></li>
+            <li class="nav-item"><a href="#item5" class="nav-link" data-toggle="tab">迪士尼乐园</a></li>
+            <li class="nav-item"><a href="#item6" class="nav-link" data-toggle="tab">目的地特色</a></li>
+        </ul><hr/>
+        <div class="tab-content" id="style-hotel">
+           <!-- <div class=" tab-pane active" id="item1">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                <li class="col-md-4">
+                    <div class="hotel-info tilt_front">
+                        <span></span><span></span><span></span>
+                        <div class="hotel-price">罗滕堡<span>德国</span></div>
+                    </div>
+                </li>
+                <li class="col-md-4">
+                    <div class="hotel-info">
+                        <div class="hotel-price">海德堡<span>德国</span></div></div>
+                </li>
+                <li class="col-md-4">
+                    <div class="hotel-info">
+                        <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                </li>
+                <li class="col-md-4">
+                    <div class="hotel-info">
+                        <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                </li>
+                <li class="col-md-4">
+                    <div class="hotel-info">
+                        <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                </li>
+                <li class="col-md-4">
+                    <div class="hotel-info">
+                        <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                </li>
+               </ul>
+            </div> -->
+            <!-- <div class=" tab-pane" id="item2">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info tilt_front">
+                            <div class="hotel-price">罗滕堡<span>德国</span></div>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">海德堡<span>德国</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <div class=" tab-pane" id="item3">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info tilt_front">
+                            <div class="hotel-price">罗滕堡<span>德国</span></div>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">海德堡<span>德国</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <div class=" tab-pane" id="item4">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info tilt_front">
+                            <div class="hotel-price">罗滕堡<span>德国</span></div>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">海德堡<span>德国</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <div class=" tab-pane" id="item5">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info tilt_front">
+                            <div class="hotel-price">罗滕堡<span>德国</span></div>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">海德堡<span>德国</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- <div class=" tab-pane" id="item6">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info tilt_front">
+                            <div class="hotel-price">罗滕堡<span>德国</span></div>
+                        </div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">海德堡<span>德国</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">哈尔施塔特<span>奥地利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">五渔村<span>意大利</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">羊角村<span>荷兰</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price">因特拉肯<span>瑞士</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </div>
+
+    <h4 class="text-center">特价酒店</h4>
+    <div class="hotel-floor2">
+        <ul class="d-flex justify-content-around list-unstyled nav nav-tabs">
+            <li class="nav-item"><a href="#item7" class="nav-link active show" data-toggle="tab">曼谷</a></li>
+            <li class="nav-item"><a href="#item8" class="nav-link" data-toggle="tab">台北</a></li>
+            <li class="nav-item"><a href="#item9" class="nav-link" data-toggle="tab">东京</a></li>
+            <li class="nav-item"><a href="#item10" class="nav-link" data-toggle="tab">香港</a></li>
+            <li class="nav-item"><a href="#item11" class="nav-link" data-toggle="tab">首尔</a></li>
+            <li class="nav-item"><a href="#item12" class="nav-link" data-toggle="tab">新加坡</a></li>
+        </ul><hr/>
+        <div class="tab-content" id="discount-hotel">
+            <!-- <div class=" tab-pane active" id="item7">
+                <ul class="d-flex justify-content-around list-unstyled row">
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+            <li class="col-md-4">
+                <div class="hotel-info">
+                    <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+            </li>
+        </ul>
+            </div>
+            <div class=" tab-pane" id="item8">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客5号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客5号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" tab-pane" id="item9">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" tab-pane" id="item10">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" tab-pane" id="item11">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class=" tab-pane" id="item12">
+                <ul class="d-flex justify-content-around list-unstyled row">
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                    <li class="col-md-4">
+                        <div class="hotel-info">
+                            <div class="hotel-price"><span>8.4分</span><span>曼谷威客3号酒店(原曼谷胜利纪念碑全季酒店)</span><span> Vic3 Bankok</span></div></div>
+                    </li>
+                </ul>
+            </div> -->
+    </div>
+</div>
+</div>
+</div>
+
+<div class="footer bg-dark">
+    <div class="footer-info clearfix">
+        <ul class="list-unstyled float-left">
+            <h6>全球旅游消费指南</h6>
+            <li>覆盖全球200多个国家和地区</li>
+            <li><span class="font-mfw">100,000,000</span> 位旅行者</li>
+            <li><span class="font-mfw">920,000</span> 家国际酒店</li>
+            <li><span class="font-mfw">21,000,000</span> 条真实点评</li>
+            <li><span class="font-mfw">382,000,000</span> 次攻略下载</li>
+            <li><a href="#"  class="font-mfw">中国旅游行业第一部“玩法”</a></li>
+        </ul>
+        <ul class="list-unstyled float-left">
+            <h6>关于我们</h6>
+            <li><a href="#">关于马蜂窝</a>&nbsp;&nbsp;<a href="#">联系我们</a></li>
+            <li><a href="#">隐私政策</a>&nbsp;&nbsp;<a href="#">商标声明</a></li>
+            <li><a href="#">服务协议</a>&nbsp;&nbsp;<a href="#">游记协议</a></li>
+            <li><a href="#">商城平台</a>&nbsp;&nbsp;<a href="#">服务协议</a></li>
+            <li><a href="#">网络信息侵权通知指引</a></li>
+            <li><a href="#">网站地图</a>&nbsp;&nbsp;<a href="#" class="font-mfw">加入马蜂窝</a></li>
+        </ul>
+        <ul class="list-unstyled float-left">
+            <h6 class="text-center">旅行服务</h6>
+            <li><a href="#">旅游攻略</a><a href="#" class="float-right">酒店预订</a></li>
+            <li><a href="#">旅游特价</a><a href="#" class="float-right">国际租车</a></li>
+            <li><a href="#">旅游问答</a><a href="#" class="float-right">旅游保险</a></li>
+            <li><a href="#">旅游指南</a><a href="#" class="float-right">订火车票</a></li>
+            <li><a href="#">旅游资讯</a><a href="#" class="float-right">APP下载</a></li>
+            <li><a href="#" class="font-mfw">旅行商城全球商家入驻</a></li>
+        </ul>
+        <div class="float-right">
+                <span class="mfw-ly float-left">
+                    <img src="../image/images/qr_mfw4.gif" alt=""/>
+                    <p class="text-center pr-2 pl-3 pt-2">马蜂窝旅游订阅号</p>
+                </span>
+                <span class="mfw-lp float-right">
+                    <img src="../image/images/qr_tejia4.png" alt="" />
+                    <p class="text-center pr-2 pl-3 pt-2">马蜂窝良品官方服务号</p>
+                </span>
+        </div>
+    </div>
+    <div class="footer-share">
+        <div class="text-center clearfix">
+            <h6 class="pr-5">向崇尚自由的加勒比海盗致敬!</h6>
+            <div class="foot-icon">
+                <span class="foot-icon1"></span>
+                <span class="foot-icon2"></span>
+                <span class="foot-icon3"></span>
+            </div>
+        </div>
+        <div class="footer-copyright"></div>
+
+    </div>
+    <div class="foot-links clearfix"><hr style="border-color: #575A5B"/><a href="#">马可波罗</a><a href="#">Onlylady女人志</a><a href="#">艺龙旅游指南</a><a href="#">欣欣旅游网</a><a href="#">户外运动</a><a href="#">365音乐网</a><a href="#">爱问共享资料</a><a href="#">旅游网</a><a href="#">小说网</a><a href="#">学习啦</a><a href="#">游多多自助游</a><a href="#">问答</a><a href="#">火车时刻表</a><a href="#">驴妈妈旅游网</a><a href="#">好豆美食网</a><a href="#">二手车</a><a href="#">绿野户外</a><a href="#">途牛</a><a href="#">旅游网</a><a href="#">图吧</a><a href="#">SUV联合越野</a><a href="#">手机浏览器</a><a href="#">上海地图</a><a href="#">天气预报查询</a><a href="#">同程旅游</a><a href="#">火车票</a><a href="#">YunOS</a><a href="#">携程旅游</a><a href="#">锦江旅游</a><a href="#">火车时刻表</a><a href="#">TripAdvisor</a><a href="#">天巡网</a><a href="#">短租房</a><a href="#">租租车</a><a href="#">五分旅游网</a><a href="#">酒店预订</a><a href="#">爱旅行网</a><a href="#">旅游</a><a href="#">旅游网</a><a href="#">wed114结婚网</a><a href="#">车讯网</a><a href="#">遨游旅游网</a><a href="#">手机</a><a href="#">更多友情链接&gt;&gt;</a>
+    </div>
+    <div class="foot-copyright clearfix">
+        <hr style="border-color: #575A5B"/>
+        <a href="#" class="foot-logo"></a>
+        <p class="foot-copyinfo">&copy;&nbsp;2018&nbsp;Mafengwo.cn
+            <a href="#"> 京ICP备11015476号</a>
+            <a href="#" class="copy-icon"><i></i>京公网安备11010502013401号</a>
+            <a href="">京ICP证110318号</a>
+        </p>
+        <p class="foot-copyinfo"><a href="#">营业执照</a>
+            &nbsp;&nbsp;<a href="#">帮助中心</a>
+            &nbsp;&nbsp;马蜂窝客服：国内
+            <span class="font-mfw">4006-345-678</span>
+            &nbsp;海外&nbsp;<span class="font-mfw">+86-10-5922-2799</span>
+        </p>
+            <span class="float-right">
+                <a href="#" class="foot-icon4"></a>
+                <a href="#" class="foot-icon5"></a>
+                <a href="#" class="foot-icon6"></a>
+            </span>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var timer = setInterval(function(){
+        var active = document.querySelectorAll("a.nav-link.active.show");
+        $(active).css("border-bottom","4px solid #ff9d00");
+        $("a.nav-link").not(".show").css("border-bottom","none");
+    },1);
+
+
+
+
+    var dateOne = document.getElementById("date-selector-one");
+    var date1 = document.getElementById("date1");
+    var boxMfw = document.querySelectorAll(".box-mfw");
+    date1.style.display="none";
+    dateOne.onclick = function(){
+        if(date1.style.display=="none"){
+            date2.style.display="none";
+            pCount.style.display="none";
+            date1.style.display="flex";
+            boxMfw.style.boxShadow=" 0 0 4px #FF9D00"
+        }else{
+            date1.style.display="none";
+        }
+    };
+
+
+    var datetwo = document.getElementById("date-selector-two");
+    var date2 = document.getElementById("date2");
+    date2.style.display="none";
+    datetwo.onclick = function(){
+        if(date2.style.display=="none"){
+            date1.style.display="none";
+            pCount.style.display="none";
+            date2.style.display="flex";
+        }else{
+            date2.style.display="none";
+        }
+    };
+    var count = document.getElementById("people-count");
+    var  pCount= document.getElementById("p-count");
+    pCount.style.display="none";
+    count.onclick = function(){
+        if(pCount.style.display=="none"){
+            date1.style.display="none";
+            date2.style.display="none";
+            pCount.style.display="block";
+        }else{
+            pCount.style.display="none";
+        }
+    };
+    var aCount = document.getElementById("adult");
+    var selaCount1=aCount.lastElementChild;
+    aCount.onclick = function(){
+        pCount.style.display="block";
+        if(selaCount1.style.display=="none"){
+            $(selaCount1).css("display","block");
+        }else{
+            $(selaCount1).css("display","none");
+        }
+    };
+    var cCount = document.getElementById("child");
+    var selaCount2=aCount.lastElementChild;
+    cCount.onclick = function(){
+    pCount.style.display="block";
+    if(selaCount2.style.display=="none"){
+        $(selaCount2).css("display","block");
+    }else{
+        $(selaCount2).css("display","none");
+    }}
+</script>

@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body{*/
+    /*background: #333333;*/
+/*}*/
+.primary-color{
+    background: #FF9D00;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.fixed-nav{
+    content: '';
+    display: block;
+    position: fixed;
+    right: 220px;
+    bottom: 50px;
+    background: #fff;
+}
+.fixed-nav>span{
+    border: 2px solid #dfdfdf;
+}
+.fixed-nav>a:nth-child(1){
+    content: '';
+    display: block;
+    border: 2px solid #dfdfdf;
+    width: 42px;
+    height: 42px;
+    border-bottom: none;
+    background-position: 32.5% 91.3%;
+    background-size:680% 680% ;
+    background-image: url("../image/images/header-sprites13.png");
+}
+.fixed-nav>span:nth-child(2){
+    content: '';
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url("../image/images/header-sprites13.png");
+    background-position:50% 96%;
+    border-bottom: none;
+}
+.fixed-nav>span:nth-child(3){
+    content: '';
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-image: url("../image/images/header-sprites13.png");
+    background-position:68% 96.5%;
+}
+.fixed-nav>span:nth-child(3):hover{
+    background-color: #FF9D00;
+    background-position: 87% 96%;
+}
+.fixed-nav>span:nth-child(3):hover i{
+    display: block;
+}
+.fixed-nav>span:nth-child(2):hover b{
+    display: block;
+}
+.fixed-nav>a:nth-child(1):hover b{
+    display: block;
+}
+.fixed-nav>span:nth-child(3)>i{
+    position: fixed;
+    width: 120px;
+    height: 150px;
+    border: 1px solid #efefef;
+    border-right: none;
+    background: #fff;
+    display: none;
+}
+.fixed-nav>span:nth-child(3)>i:nth-child(1){
+    right: 280px;
+    bottom: 50px;
+}
+.fixed-nav>span:nth-child(3)>i:nth-child(2){
+    right: 400px;
+    bottom: 50px;
+}
+.fixed-nav>span:nth-child(3)>i>img{
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 10px auto;
+}
+.fixed-nav>span:nth-child(3)>i>b{
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+
+}
+.fixed-nav>span:nth-child(3)>i>b:nth-child(2){
+    color: red;
+}
+.fixed-nav>span:nth-child(2)>b{
+     display: none;
+     text-align: center;
+     font-weight: 200;
+     font-size: 12px;
+     width: 38px;
+     height: 40px;
+     letter-spacing: 4px;
+     margin: auto;
+     color: #fff;
+     background: #aaa;
+     cursor: default;
+    padding: 2px 0 0 2px;
+
+ }
+.fixed-nav>a:nth-child(1)>b{
+    display: none;
+    text-align: center;
+    font-weight: 200;
+    font-size: 12px;
+    width: 38px;
+    height: 40px;
+    letter-spacing: 4px;
+    margin: auto;
+    color: #fff;
+    background: #aaa;
+    cursor: default;
+    padding: 2px 0 0 2px;
+
+}
+.fixed-nav>div:nth-child(4){
+    display: block;
+    background-image: url("../image/images/new-customer-icon.gif");
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    width: 200px;
+    height: 160px;
+    background-position: 100% 100%;
+    background-size:150% 190%;
+}
+.fixed-nav>div:nth-child(4)>a{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 6px;
+    border-radius: 10px;
+}
+.fixed-nav>div:nth-child(4)>a:focus .yc{
+    display:none;
+}
+.fixed-nav>div:nth-child(4)>div{
+    display: none;
+    background-image: url("../image/images/new-customer-hover-icon.png");
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    background-size:100% 100%;
+}
+.fixed-nav>div.yc:hover{
+    background: rgba(0,0,0,0);
+}
+.fixed-nav>div.yc:hover div{
+    display: block;
+}
+.ad-left{
+    background-image: url("../image/picture/coupon-hx-v2.png");
+    width: 150px;
+    height: 165px;
+    background-size: 100% 100%;
+    position: fixed;
+    left: 120px;
+    bottom: 30px;
+    cursor: pointer;
+}

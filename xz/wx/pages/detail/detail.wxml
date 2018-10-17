@@ -1,0 +1,50 @@
+<!--pages/detail/detail.wxml-->
+<view class='slider'>
+  <swiper autoplay indicator-dots='{{true}}' interval='3000' duration='400'>
+    <swiper-item wx:for="{{rows}}" wx:key="id"> 
+      <image src='{{item.img_url}}' width="300" height="150" mode='aspectFill'></image>
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src='/assets/images/banner-02.png' width="300" height="150" mode='aspectFill'></image>
+    </swiper-item> -->
+  </swiper>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+  <navigator class='cell-item arrow'>
+    <text class='shop-title'>商品名称：{{shopInfo.title}}</text>
+  </navigator>
+  <navigator class='cell-item arrow'>
+    <text>价格</text>
+    <view class='priceInfo'>
+      <text class='oldprice'>{{shopInfo.price*1.1}}</text>
+      <text class='newprice'>{{shopInfo.price}}</text>
+    </view>
+  </navigator>
+  <navigator class='cell-item arrow'>
+    <text>数量</text>
+    <view class='tui-number-group'>
+      <button class='tui-number-cell' bindtap='nextNum'>-</button>
+      <input type='number' class='tui-number-cell' value='{{number}}'></input>
+      <button class='tui-number-cell' bindtap='prevNum'>+</button>
+    </view>
+  </navigator>
+</view>
+<view class='divider'></view>
+<view class='cell'>
+  <navigator class='cell-item arrow'>
+    <text class='cart-price'>{{shopInfo.shopCar}}</text>
+  </navigator>
+  <navigator class='cell-item arrow'>
+    <text>使用条款:</text>
+    <text>{{shopInfo.info}}</text>
+  </navigator>
+</view>
+
+<view class='divider'></view>
+<view class='cell'>
+  <navigator class='cell-item arrow'>
+    <button class='addCart'>加入购物车</button>
+    <button class='addOrder'>立即购买</button>
+  </navigator>
+</view>

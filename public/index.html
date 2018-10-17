@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/user.js"></script>
+</head>
+<body>
+<!--网页头部-->
+<div class="header-all col-md-12">
+    <div id="header" class="clearfix d-flex">
+        <div id="logo-1" class="col-2">
+            <a href="index.html"></a>
+        </div>
+        <ul class="list-unstyled col-7">
+            <li class="header-index"><a href="index.html">首页</a></li>
+            <li class=""><a href="">目的地</a></li>
+            <li class=""><a href="strategy.html">旅游攻略</a></li>
+            <li class=""><a href="" class="show1">旅行商城
+                <span class="icon-show"></span></a>
+                <div class="list_group group-one">
+                    <ul class="list-unstyled">
+                        <li><span class="">自由行</span><b class="icon_hot">hot</b></li>
+                        <li>跟团游</li>
+                        <li>当地游</li>
+                        <li><span class="">国内机票<b class="icon_new">new</b></span></li>
+                        <li>签证</li>
+                        <li>保险</li>
+                    </ul>
+                </div></li>
+            <li class=""><a href="hotel.html">酒店</a></li>
+            <li class="for-border"><a href="" class="show2">社区
+                <span class="icon-show"></span></a>
+                <div class="list_group">
+                    <ul class="list-unstyled float-left">
+                        <li>问答<b class="icon_hot">hot</b></li>
+                        <li>马蜂窝周边<b class="icon_new">new</b></li>
+                        <li>蜂首俱乐部</li>
+                        <li>结伴</li>
+                    </ul>
+                    <ul class="list-unstyled float-right">
+                        <li>小组论坛</li>
+                        <li>分舵同城</li>
+                        <li>马蜂窝拍卖行</li>
+                        <li>照片PK</li>
+                        <li>真人兽</li>
+                        <li>道具商店</li>
+                    </ul>
+                </div></li>
+            <li class=""><a href="">APP</a></li>
+        </ul>
+        <div class="float-right log_reg col-3">
+            <div class="col-md-12" id="signout">
+                <a href="#" class="qq_login"></a>
+                <a href="#" class="wb_login"></a>
+                <a href="#" class="wc_login"></a>
+                <div class="log_reg float-left mt-1">
+                    <a href="login.html" class="mx-2" id="btnLogin">登录</a>
+                    <span class="text-secondary">|</span>
+                    <a href="regist.html" class="mx-2">注册</a>
+                </div>
+            </div>
+            <div class="col-md-12" id="signin">
+                    <span id="upic"></span>
+                    <span id="uname"></span>
+                    <a id="btnSignout" href="javascript:;">注销</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index-top clearfix">
+    <div class="carousel clearfix" data-ride="carousel" id="img">
+        <ul class="float-right list-unstyled carousel-indicators" style="right: 0">
+            <li data-target="#img" data-slide-to="0" class="active">
+                <!--<img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc01.jpeg"/>-->
+            </li>
+            <li data-target="#img" data-slide-to="1">
+                <!--<img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc02.jpeg" alt=""/>-->
+            </li>
+            <li data-target="#img" data-slide-to="2">
+                <!--<img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc03.jpeg" alt=""/>-->
+            </li>
+            <li data-target="#img" data-slide-to="3">
+                <!--<img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc04.jpeg" alt=""/>-->
+            </li>
+            <li data-target="#img" data-slide-to="4">
+                <!--<img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc05.jpeg" alt=""/>-->
+            </li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active"><a href="#">
+                <div class="descript">
+                <p><b>7</b><span>/Aug.2018</span></p>
+                <p><span>喜欢上石塘的N个理由|一起过一个海盐味的夏天</span></p>
+                </div>
+                <img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc01.jpeg" alt=""/>
+                <p class="source"><a href="#"></a>图片来自于<a href="#" class="font-mfw">温岭</a>，此目的地共收藏了<a href="#" class="font-mfw">1575</a>张<a href="#" class="font-mfw">温岭</a>图片。本片由<a href="#" class="font-mfw">小卢澄子</a>荣誉出品！</p>
+            </a></div>
+            <div class="carousel-item"><a href="#">
+                <div class="descript">
+                    <p><b>6</b><span>/Aug.2018</span></p>
+                    <p><span>『老少女的觉醒』——带妈妈走进全龄段女性的美丽新世界</span></p>
+                </div>
+                <img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc02.jpeg" alt=""/><p class="source"><a href="#"></a>图片来自于<a href="#" class="font-mfw">韩国</a>，此目的地共收藏了<a href="#" class="font-mfw">1290946</a>张<a href="#" class="font-mfw">韩国</a>图片。本片由<a href="#" class="font-mfw">公考少女大妹酱</a>荣誉出品！</p>
+            </a></div>
+            <div class="carousel-item"><a href="#">
+                <div class="descript">
+                    <p><b>5</b><span>/Aug.2018</span></p>
+                    <p><span>七月的澳洲、三座城市和22岁——真的是漂洋过海去看你啊</span></p>
+                </div>
+                <img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc03.jpeg" alt=""/>
+                <p class="source"><a href="#"></a>图片来自于<a href="#" class="font-mfw">澳大利亚</a>，此目的地共收藏了<a href="#" class="font-mfw">509135</a>张<a href="#" class="font-mfw">澳大利亚</a>图片。本片由<a href="#" class="font-mfw">JadeYan</a>荣誉出品！</p>
+            </a></div>
+            <div class="carousel-item"><a href="#">
+                <div class="descript">
+                    <p><b>4</b><span>/Aug.2018</span></p>
+                    <p><span>过一周慢生活，带着甜甜奶茶香的斯里兰卡7日小环岛</span></p>
+                </div>
+                <img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc04.jpeg" alt=""/>
+                <p class="source"><a href="#"></a>图片来自于<a href="#" class="font-mfw">斯里兰卡</a>，此目的地共收藏了<a href="#" class="font-mfw">415989</a>张<a href="#" class="font-mfw">斯里兰卡</a>图片。本片由<a href="#" class="font-mfw">Xinge</a>荣誉出品！</p>
+            </a></div>
+            <div class="carousel-item"><a href="#">
+                <div class="descript">
+                    <p><b>3</b><span>/Aug.2018</span></p>
+                    <p><span>花鸟岛|只要海风在吹,我都会想你（附2018新登岛攻略）</span></p>
+                </div>
+                <img src="../image/images/wKgBEFtoApiARwYbAAX8hXZ-yvc05.jpeg" alt=""/>
+                <p class="source"><a href="#"></a>图片来自于<a href="#" class="font-mfw">花鸟岛</a>，此目的地共收藏了<a href="#" class="font-mfw">179</a>张<a href="#" class="font-mfw">花鸟岛</a>图片。本片由<a href="#" class="font-mfw">大菊在路上</a>荣誉出品！</p>
+              </a></div>
+        </div>
+        <div class="query">
+            <ul class="query-group ml-4 nav list-unstyled float-left">
+                <li class="nav-item"><a href="#all1" class="query-all active show" data-toggle="tab"></a>全部</li>
+                <li class="nav-item"><a href="#hotel1" class="query-hotel" data-toggle="tab"></a>酒店</li>
+                <li class="nav-item"><a href="#target1" class="query-target" data-toggle="tab"></a>目的地</li>
+                <li class="nav-item"><a href="#goal1" class="query-mall" data-toggle="tab"></a>旅行商城</li>
+            </ul>
+            <div class="tab-content">
+            <div class="ml-4 mt-2 tab-pane active show clearfix mt-5" id="all1">
+                <input type="text"  placeholder="搜目的地/攻略/酒店/旅行特价"/>
+                <a href="#" class="ml-2" id="search-test"><i></i></a>
+            </div>
+            <div class="ml-4 mt-2 tab-pane  clearfix mt-5" id="hotel1">
+                <div>
+                <input type="text"  placeholder="请输入国家、地区、城市名称"/>
+                    <input type="text" readonly="readonly" placeholder="未定" />
+                    <input type="text" readonly="readonly" placeholder="未定" />
+                    <b id="date-selector-one">
+                    <div class="date" id="date1">
+                        <div><span><i></i>九月&nbsp;2018</span>
+                        <table class="ui-datepicker-calendar">
+                            <thead>
+                               <tr>
+                                   <th><span>一</span></th>
+                                   <th><span>二</span></th>
+                                   <th><span>三</span></th>
+                                   <th><span>四</span></th>
+                                   <th><span>五</span></th>
+                                   <th><span style="color: #FF9D00">六</span></th>
+                                   <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                 <tr>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>1</td>
+                                     <td>2</td>
+                                 </tr>
+                                 <tr>
+                                     <td>3</td>
+                                     <td>4</td>
+                                     <td>5</td>
+                                     <td>6</td>
+                                     <td>7</td>
+                                     <td>8</td>
+                                     <td>9</td>
+                                 </tr>
+                                 <tr>
+                                     <td>10</td>
+                                     <td>11</td>
+                                     <td>12</td>
+                                     <td>13</td>
+                                     <td>14</td>
+                                     <td>15</td>
+                                     <td>16</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17</td>
+                                     <td>18</td>
+                                     <td>19</td>
+                                     <td>20</td>
+                                     <td>21</td>
+                                     <td>22</td>
+                                     <td>23</td>
+                                 </tr>
+                                 <tr>
+                                     <td>24</td>
+                                     <td>25</td>
+                                     <td>26</td>
+                                     <td>27</td>
+                                     <td>28</td>
+                                     <td>29</td>
+                                     <td>30</td>
+                                 </tr>                            
+                             </tbody>
+                        </table></div>
+                        <div><span>十月&nbsp;2018<i></i></span>
+                        <table class="ui-datepicker-calendar">
+                            <thead>
+                               <tr>
+                                   <th><span>一</span></th>
+                                   <th><span>二</span></th>
+                                   <th><span>三</span></th>
+                                   <th><span>四</span></th>
+                                   <th><span>五</span></th>
+                                   <th><span style="color: #FF9D00">六</span></th>
+                                   <th><span style="color: #FF9D00">日</span></th>
+                                </tr>
+                            </thead>
+                             <tbody>
+                                 <tr>
+                                     <td>国庆</td>
+                                     <td>2</td>
+                                     <td>3</td>
+                                     <td>4</td>
+                                     <td>5</td>
+                                     <td>6</td>
+                                     <td>7</td>
+                                 </tr>
+                                 <tr>
+                                     <td>8</td>
+                                     <td>9</td>
+                                     <td>10</td>
+                                     <td>11</td>
+                                     <td>12</td>
+                                     <td>13</td>
+                                     <td>14</td>
+                                 </tr>
+                                 <tr>
+                                     <td>15</td>
+                                     <td>16</td>
+                                     <td>17</td>
+                                     <td>18</td>
+                                     <td>19</td>
+                                     <td>20</td>
+                                     <td>21</td>
+                                 </tr>
+                                 <tr>
+                                     <td>22</td>
+                                     <td>23</td>
+                                     <td>24</td>
+                                     <td>25</td>
+                                     <td>26</td>
+                                     <td>27</td>
+                                     <td>28</td>
+                                 </tr>
+                                 <tr>
+                                     <td>29</td>
+                                     <td>30</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                 </tr>                            
+                            </tbody>
+                        </table></div>
+                    </div>
+                    </b>
+                    <b id="date-selector-two">
+                        <div class="date" id="date2">
+                            <div><span><i></i>九月&nbsp;2018</span>
+                                <table class="ui-datepicker-calendar">
+                                    <thead>
+                                    <tr>
+                                        <th><span>一</span></th>
+                                        <th><span>二</span></th>
+                                        <th><span>三</span></th>
+                                        <th><span>四</span></th>
+                                        <th><span>五</span></th>
+                                        <th><span style="color: #FF9D00">六</span></th>
+                                        <th><span style="color: #FF9D00">日</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                    </tr>
+                                    </tbody>
+                                </table></div>
+                            <div><span>十月&nbsp;2018<i></i></span>
+                                <table class="ui-datepicker-calendar">
+                                    <thead>
+                                    <tr>
+                                        <th><span>一</span></th>
+                                        <th><span>二</span></th>
+                                        <th><span>三</span></th>
+                                        <th><span>四</span></th>
+                                        <th><span>五</span></th>
+                                        <th><span style="color: #FF9D00">六</span></th>
+                                        <th><span style="color: #FF9D00">日</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>国庆</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    </tbody>
+                                </table></div>
+                        </div>
+                    </b>
+                    
+                </div>
+                <a href="#" class="ml-2" ><i></i></a>
+            </div>
+                <div class="ml-4 mt-2 tab-pane  clearfix mt-5" id="target1">
+                    <input type="text"  placeholder="我要去..."/>
+                    <a href="#" class="ml-2" ><i></i></a>
+                </div>
+                <div class="ml-4 mt-2 tab-pane  clearfix mt-5" id="goal1">
+                    <input type="text"  placeholder="产品名称/目的地/优惠"/>
+                    <a href="#" class="ml-2" ><i></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--<div class="ceshi"></div>-->
+<!--<div class="ceshi2"></div>-->
+<div class="index-bottom clearfix">
+<div class="index-right float-left">
+  <ul class="list-unstyled">
+    <li class="trip-news1">
+        <p>
+            <a href="#" class="nav-style1">旅行家专栏</a>
+            <a href="#" class="nav-style2">专栏首页</a>
+        </p>
+
+
+
+
+
+
+
+
+
+<!-- <div class="carousel" data-ride="carousel" id="demo">
+        <ul class="carousel-indicators list-unstyled">
+            <li data-target="#demo" data-slide-to="0" class=" active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../image/images/wKgBEFuGWGmAdZUKAACtLtPyYwE53.jpeg"  alt=""/>
+                <div class="carousel-caption text-dark">
+        <a href="#" class="news-title">遇见葡萄牙</a>
+        <span class="news-font1">“即使整个世界都被我握在手中，我也会把它换成一张返回道拉多雷斯大街的电车票。”</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../image/images/wKgIC1uGWHKAKka8AAFmpzFZ0Ps54.jpeg" alt=""/>
+                <div class="carousel-caption text-dark">
+        <a href="#" class="news-title">遇见葡萄牙</a>
+        <span class="news-font1">“即使整个世界都被我握在手中，我也会把它换成一张返回道拉多雷斯大街的电车票。”</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../image/images/wKgBZ1t_5yOAdPu5AAlaQziTe-E79.jpeg" alt=""/>
+                <div class="carousel-caption text-dark">
+        <a href="#" class="news-title">遇见葡萄牙</a>
+        <span class="news-font1">“即使整个世界都被我握在手中，我也会把它换成一张返回道拉多雷斯大街的电车票。”</span>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../image/images/wKgBZ1t_5y6ADhlHAACTLAZo-WI23.jpeg" alt=""/>
+                <div class="carousel-caption text-dark">
+        <a href="#" class="news-title">遇见葡萄牙</a>
+        <span class="news-font1">“即使整个世界都被我握在手中，我也会把它换成一张返回道拉多雷斯大街的电车票。”</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+       <a href="#" class="news1"></a>
+        <a href="#" class="news-title">遇见葡萄牙</a>
+        <span class="news-font1">“即使整个世界都被我握在手中，我也会把它换成一张返回道拉多雷斯大街的电车票。”</span>
+    </li>
+    <li class="trip-news1">
+        <p>
+            <span href="#" class="nav-style1">旅游攻略推荐</span>
+            <a href="#" class="nav-style2">更多</a>
+        </p>
+        <a href="#" class="news2"></a>
+        <a href="#" class="news-title mb-1" >原来《十二道锋味》也来过这里！...</a>
+        <ul class="list-unstyled">
+            <li><span class="news-font1"><a href="#" class="news-font2">任性宝宝</a>
+                点评了&nbsp;&nbsp;大理市的<a href="#" class="news-font2">我在大理等你</a></span></li>
+            <li><span class="news-font1"><a href="#" class="news-font2">悠游是态</a>
+                点评了&nbsp;&nbsp;晋安区的<a href="#" class="news-font2">鼓山</a></span></li>
+            <li><span class="news-font1"><a href="#" class="news-font2">马蜂窝用</a>
+                点评了&nbsp;&nbsp;资兴的<a href="#" class="news-font2">龙景峡谷</a></span></li>
+            <li><span class="news-font1"><a href="#" class="news-font2">大床房</a>
+                点评了&nbsp;&nbsp;思明区的<a href="#" class="news-font2">开小灶·小海</a></span></li>
+            <li><span class="news-font1"><a href="#" class="news-font2">夕阳深秋</a>
+                点评了&nbsp;&nbsp;锦江区的<a href="#" class="news-font2">嗨岛兔.手撕</a></span></li>
+        </ul>
+    </li>
+    <li class="trip-news1">
+        <p>
+            <span href="#" class="nav-style1">最新活动</span>
+            <a href="#" class="nav-style2">查看全部&gt;&gt;</a>
+        </p>
+        <a href="#" class="news3"></a>
+        <a href="#" class="news-title">我要的暑假作业</a>
+        <p class="news-font1">这暑假作业能测宝宝的天赋值！</p>
+    </li>
+    <li class="trip-news1">
+        <p>
+            <span href="#" class="nav-style1">未知旅行实验室</span>
+            <a href="#" class="nav-style2">查看更多&gt;&gt;</a>
+        </p>
+        <a href="#" class="news4"></a>
+    </li>
+    <li class="trip-news1">
+        <p>
+            <span href="#" class="nav-style1">加入马蜂窝</span>
+            <a href="#" class="nav-style2">更多职位&gt;&gt;</a>
+        </p>
+        <a href="#" class="news5"></a>
+        <a href="#" class="links-font1"><span class="news-font1">广告销售经理<i class="news-icon1"></i></span><span class="nav-style2">申请职位&gt;</span></a>
+        <a href="#" class="links-font1"><span class="news-font1">资深PHP开发工程师<i class="news-icon1"></i></span><span class="nav-style2">申请职位&gt;</span></a>
+        <a href="#" class="links-font1"><span class="news-font1">广告执行经理</span><span class="nav-style2">申请职位&gt;</span></a>
+    </li>
+    <li class="trip-news1">
+        <a href="#" class="nav-style1">马蜂窝旅行网站最新进展</a>
+        <ul class="mt-2">
+            <li class="nav-style2">02月06日&nbsp;<a href="#" class="nav-style2">正式更名为“马蜂窝旅游”</a></li>
+            <li class="nav-style2">11月08日&nbsp;<a href="#" class="nav-style2">蚂蜂窝2018蜂首台历开始预售</a></li>
+            <li class="nav-style2">11月05日&nbsp;<a href="#" class="nav-style2">蚂蜂窝赤水音乐季圆满结束</a></li>
+            <li class="nav-style2">05月12日&nbsp;<a href="#" class="nav-style2">指路人俱乐部首期面基大会圆满...</a></li>
+            <li class="nav-style2">10月29日&nbsp;<a href="#" class="nav-style2">蚂蜂窝2016秋酷大趴全纪录</a></li>
+            <li class="nav-style2">09月29日&nbsp;<a href="#" class="nav-style2">蚂蜂窝秋酷大趴进入倒计时</a></li>
+        </ul>
+    </li>
+  </ul>
+</div>
+    <div class="index-right-top mt-4 pr-3 float-left">
+        <h3 class="nav-style1">爆款热卖</h3>
+        <ul class="list-unstyled product">
+            <li class="float-left adv-img1"><a href="#" ><span class="adv-active links-font1">预售到11月底·上海直飞塞班岛5天自由行（6天5晚仅需3280+可代订跑车/潜水艇/飞机驾驶套餐+优惠券直接抵扣现金</span><p class="float-right price"><b style="font-size: 18px">￥3150</b>起</p></a></li>
+            <li class="float-left adv-img2"><a href="#" ><span class="adv-active links-font1">【精品小团】北京直飞迪拜4晚6日跟团游（全程阿联酋国际五星酒店+1小时劳斯莱斯或加长悍马豪车体验+迪拜节日城灯光秀+迪</span></a><p class="float-right price"><b style="font-size: 18px">￥4899</b>起</p></li>
+            <li class="float-left adv-img3"><a href="#"><span class="adv-active">[北京送签]日本单次旅游签证（拒签退双倍+免在职流水+资料极简+高出签率+顺丰包回邮+免押金+诚信经营+暖心服务</span></a><p class="float-right price"><b style="font-size: 18px">￥99</b>起</p></li>
+        </ul>
+    </div>
+    <div class="index-right-bottom">
+        <div class="title clear-fix">
+            <span class="nav-block1">
+                <a href="#" class="font-mfw">热门游记</a>
+                <span class="choose-btn">
+                    <i></i>筛选
+                </span></span>
+            <span class="nav-block2">
+                <a href="#" class="new-send">最新发表</a>
+            </span>
+            <span class="nav-block3"><a href="#">
+                <i class="write-note"></i><span>写游记</span>
+            </a></span>
+        </div>
+        <div class="index-group">
+            <ul class="list-unstyled">
+                <!-- <li><a href="#" class="block">
+                    <span class="index-group-img index-group-img1 float-left"></span>
+                    <span class="index-title">邂逅非洲，神奇动物在这里 --- 纳米比亚13日</span>
+                    <span class="news-font1">我之前一直以为 非洲 是个离我非常遥远的地方，要么出现在赵忠祥老师配音的《动物世界》里，要么是在国家地理杂志的照片上，再或者就是在旅行节目里看大仁哥一人一车一狗的自在逍遥。 直到上...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">纳米比亚
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img1"></span><span class="font-username" >honeyclover</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">5451/81</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">183</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img2 float-left"></span>
+                    <span class="index-title">【摩洛哥】时光流逝，我对你的爱却与日俱增</span>
+                    <span class="news-font1">插播一篇【 冰岛 + 芬兰 】游记，欢迎围观！ 邂逅欧若拉女神与圣诞老人，再为一场星际穿越： http://www.mafengwo.cn/i/10016110.html Salut Morac! - “你昨晚去哪里了？” - “那么久以前...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">摩洛哥
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img2"></span><span class="font-username" >耳聋的小鬼</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">7865/73</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">326</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img3 float-left"></span>
+                    <span class="index-title">多瑙河周边到底有什么好玩的？想悠闲的度假，就看这里吧</span>
+                    <span class="news-font1">新的方式重新游欧洲近几年，因为工作原因每年都会去欧洲很多次，欧洲对于我来讲，一点都不陌生，每年的旅行目的地都越来越深入，旅行方式也都各不相同。比如有过自驾、有过火车...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">奥地利
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img3"></span><span class="font-username" >黄建华</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">69511/130</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">1214</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img4 float-left"></span>
+                    <span class="index-title">初夏，和山间农田最配哦~</span>
+                    <span class="news-font1">在被焦虑，慌张，喧嚣的世事冲刷之时 有一些美好始终拥抱着我们 让我们脚下有根 心中有爱 在之前的推文中提到过为什么每年要去 无锡 2013年第一次去的场景还在眼前 然而今年已是第六个年头 ...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">无锡
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img4"></span><span class="font-username" >茏宝去玩吧</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">3709/48</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">151</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img5 float-left"></span>
+                    <span class="index-title">短话长沙｜吃不了辣，也能快乐一夏（美食探店+景...</span>
+                    <span class="news-font1">星城印象｜这个地方有点Hot 这些年前后路过 长沙 少说五六次，但却一直没机会稍作停留，其实蛮想好好打量一下这座城，以自己的视角去观察这里的人和物。 当然，很大程度上也是逃不过舌尖上...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">长沙
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img5"></span><span class="font-username" > AllenL</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">49866/196</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">3123</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img6 float-left"></span>
+                    <span class="index-title">一个人的首尔 周末闲逛指南</span>
+                    <span class="news-font1">提到首尔，作为一个去了很多次韩国的人来说，也是不得不爱，我给它的评价是，时尚和传统完美交融，一座能永远让你保持新鲜感的城市，大都市应有的高楼大厦鳞次栉比，韩式小屋错...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">首尔
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img6"></span><span class="font-username" >张三</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">34600/56</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">622</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img7 float-left"></span>
+                    <span class="index-title">北纬30度的春天，盛开在圣洁的南迦巴瓦峰下——记春行西藏</span>
+                    <span class="news-font1">写在前面 西藏 ，对于很多人来说 是旅行的终极梦想 这里也是我一直想要到达的地方 在八千万年前的地质运动中成长起的这片土地 雪山巍峨，圣湖密布 壮阔的荒原和深邃的沟壑同生 亚热带景观和...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">西藏
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img7"></span><span class="font-username" >十八</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">4452/94</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">507</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img8 float-left"></span>
+                    <span class="index-title">从南半球到北半球，只为遇见你——南非IVHQ志愿之旅</span>
+                    <span class="news-font1">前言 “当我用心去触摸这片土地时，我庆幸自己当初的选择，这里让我知道什么是朴素和善良，让我找回原始的激情。” （图为我造访最多次的沙滩，每天吃完午饭便在沙滩上晒晒太阳打个小盹） ...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">开普敦
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img8"></span><span class="font-username" >一棵棕榈</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">3548/101</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">351</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img9 float-left"></span>
+                    <span class="index-title">穷极一生，做不完一场梦——台湾</span>
+                    <span class="news-font1">你说，人生有点乏味，所以去骑行 我说，想给人生加点调料，所以来骑行 谢谢这14天遇见的人和发生的事 最后，谢谢自己 不说再见，因为相信我们会再遇见。 ——2018年夏 Getting in Taiwan 游...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">台湾
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img9"></span><span class="font-username" >Getting</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">8131/105</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">552</span>
+                    </p>
+                </a></li>
+                <li><a href="#" class="block">
+                    <span class=" index-group-img index-group-img10 float-left"></span>
+                    <span class="index-title">在冶勒湖——我会像青草一样呼吸</span>
+                    <span class="news-font1">“最好是娴静地招呼那熹微的晨光，不必忙乱地奔向前去，也不要对落日忘记感谢那曾为晨光之垂死的光明。” 这是周作人先生在《我独爱生活应有的样子》描写的生活的样子。今年的五月就像是夏天...</span>
+                    <p class="only-p">
+                        <span class="position-icon"></span>
+                        <a href="#" class="font-place">成都
+                            <span class="place">，by</span></a>
+                        <a href="" class="username-block">
+                            <span class="user-img10"></span><span class="font-username" >taoer陶陶子</span></a>
+                        <span class="eye-icon"></span>
+                        <span class="font-count1">8820/113</span>
+                        <span class="agree-icon"></span>
+                        <span class="font-count2">570</span>
+                    </p>
+                </a></li> -->
+            </ul>
+            <div class="page-items">
+                <ul class="list-unstyled">
+                    <li class="float-laft place mt-1 mr-2">共166页 / 1985条</li>
+                    <li class="">
+                        <a href="#" class="page-one">1</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">2</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">3</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">4</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">5</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">6</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">7</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">8</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="page-font">9</a>
+                    </li>
+                    <li class="">
+                        <a href="#" class="next-page">下一页&gt;&gt;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer bg-dark">
+    <div class="footer-info clearfix">
+        <ul class="list-unstyled float-left">
+            <h6>全球旅游消费指南</h6>
+            <li>覆盖全球200多个国家和地区</li>
+            <li><span class="font-mfw">100,000,000</span> 位旅行者</li>
+            <li><span class="font-mfw">920,000</span> 家国际酒店</li>
+            <li><span class="font-mfw">21,000,000</span> 条真实点评</li>
+            <li><span class="font-mfw">382,000,000</span> 次攻略下载</li>
+            <li><a href="#"  class="font-mfw">中国旅游行业第一部“玩法”</a></li>
+        </ul>
+        <ul class="list-unstyled float-left">
+            <h6>关于我们</h6>
+            <li><a href="#">关于马蜂窝</a>&nbsp;&nbsp;<a href="#">联系我们</a></li>
+            <li><a href="#">隐私政策</a>&nbsp;&nbsp;<a href="#">商标声明</a></li>
+            <li><a href="#">服务协议</a>&nbsp;&nbsp;<a href="#">游记协议</a></li>
+            <li><a href="#">商城平台</a>&nbsp;&nbsp;<a href="#">服务协议</a></li>
+            <li><a href="#">网络信息侵权通知指引</a></li>
+            <li><a href="#">网站地图</a>&nbsp;&nbsp;<a href="#" class="font-mfw">加入马蜂窝</a></li>
+        </ul>
+        <ul class="list-unstyled float-left">
+            <h6 class="text-center">旅行服务</h6>
+            <li><a href="#">旅游攻略</a><a href="#" class="float-right">酒店预订</a></li>
+            <li><a href="#">旅游特价</a><a href="#" class="float-right">国际租车</a></li>
+            <li><a href="#">旅游问答</a><a href="#" class="float-right">旅游保险</a></li>
+            <li><a href="#">旅游指南</a><a href="#" class="float-right">订火车票</a></li>
+            <li><a href="#">旅游资讯</a><a href="#" class="float-right">APP下载</a></li>
+            <li><a href="#" class="font-mfw">旅行商城全球商家入驻</a></li>
+        </ul>
+        <div class="float-right">
+                <span class="mfw-ly float-left">
+                    <img src="../image/images/qr_mfw4.gif" alt=""/>
+                    <p class="text-center pr-2 pl-3 pt-2">马蜂窝旅游订阅号</p>
+                </span>
+                <span class="mfw-lp float-right">
+                    <img src="../image/images/qr_tejia4.png" alt="" />
+                    <p class="text-center pr-2 pl-3 pt-2">马蜂窝良品官方服务号</p>
+                </span>
+        </div>
+    </div>
+    <div class="footer-share">
+        <div class="text-center clearfix">
+            <h6 class="pr-5">向崇尚自由的加勒比海盗致敬!</h6>
+            <div class="foot-icon">
+                <span class="foot-icon1"></span>
+                <span class="foot-icon2"></span>
+                <span class="foot-icon3"></span>
+            </div>
+        </div>
+        <div class="footer-copyright"></div>
+
+    </div>
+    <div class="foot-links clearfix"><hr style="border-color: #575A5B"/><a href="#">马可波罗</a><a href="#">Onlylady女人志</a><a href="#">艺龙旅游指南</a><a href="#">欣欣旅游网</a><a href="#">户外运动</a><a href="#">365音乐网</a><a href="#">爱问共享资料</a><a href="#">旅游网</a><a href="#">小说网</a><a href="#">学习啦</a><a href="#">游多多自助游</a><a href="#">问答</a><a href="#">火车时刻表</a><a href="#">驴妈妈旅游网</a><a href="#">好豆美食网</a><a href="#">二手车</a><a href="#">绿野户外</a><a href="#">途牛</a><a href="#">旅游网</a><a href="#">图吧</a><a href="#">SUV联合越野</a><a href="#">手机浏览器</a><a href="#">上海地图</a><a href="#">天气预报查询</a><a href="#">同程旅游</a><a href="#">火车票</a><a href="#">YunOS</a><a href="#">携程旅游</a><a href="#">锦江旅游</a><a href="#">火车时刻表</a><a href="#">TripAdvisor</a><a href="#">天巡网</a><a href="#">短租房</a><a href="#">租租车</a><a href="#">五分旅游网</a><a href="#">酒店预订</a><a href="#">爱旅行网</a><a href="#">旅游</a><a href="#">旅游网</a><a href="#">wed114结婚网</a><a href="#">车讯网</a><a href="#">遨游旅游网</a><a href="#">手机</a><a href="#">更多友情链接&gt;&gt;</a>
+    </div>
+    <div class="foot-copyright clearfix">
+        <hr style="border-color: #575A5B"/>
+        <a href="#" class="foot-logo"></a>
+        <p class="foot-copyinfo">&copy;&nbsp;2018&nbsp;Mafengwo.cn
+            <a href="#"> 京ICP备11015476号</a>
+            <a href="#" class="copy-icon">京公网安备11010502013401号</a>
+            <a href="">京ICP证110318号</a>
+        </p>
+        <p class="foot-copyinfo"><a href="#">营业执照</a>
+            &nbsp;&nbsp;<a href="#">帮助中心</a>
+            &nbsp;&nbsp;马蜂窝客服：国内
+            <span class="font-mfw">4006-345-678</span>
+            &nbsp;海外&nbsp;<span class="font-mfw">+86-10-5922-2799</span>
+        </p>
+            <span class="float-right">
+                <a href="#" class="foot-icon4"></a>
+                <a href="#" class="foot-icon5"></a>
+                <a href="#" class="foot-icon6"></a>
+            </span>
+    </div>
+</div>
+<div class="fixed-nav">
+    <a href="#">
+        <b>回到顶部</b>
+    </a>
+    <span>
+        <b  data-toggle="modal" data-target="#myModal">意见反馈</b>
+    </span>
+    <span>
+        <i><img src="../image/images/qr_mfw4.gif" alt=""/>
+            <b>马蜂窝自由行</b>
+            <b>·最潮的玩法·</b>
+        </i>
+        <i><img src="../image/images/qr_tejia4.png" alt=""/>
+            <b>马蜂窝良品</b>
+            <b>·随时随地咨询·</b>
+        </i>
+    </span>
+    <div class="yc"><div></div></div>
+    <div class="ad-left"></div>
+</div>
+</body>
+</html>
+<script>
+    var dateOne = document.getElementById("date-selector-one");
+    var date1 = document.getElementById("date1");
+    date1.style.display="none";
+    dateOne.onclick = function(){
+        if(date1.style.display=="none"){
+            date2.style.display="none";
+            date1.style.display="flex";
+        }else{
+            date1.style.display="none";
+        }
+    }
+
+
+    var datetwo = document.getElementById("date-selector-two");
+    var date2 = document.getElementById("date2");
+    date2.style.display="none";
+    datetwo.onclick = function(){
+        if(date2.style.display=="none"){
+            date1.style.display="none";
+            date2.style.display="flex";
+        }else{
+            date2.style.display="none";
+        }
+    }
+
+
+    var searchTest = document.getElementById("search-test");
+    var getTest = document.querySelector("#all1>input");
+    searchTest.onclick = function(){
+        if(getTest.value.trim()!=="")
+        location.href=`http://127.0.0.1:3000/search.html?key=${getTest.value}`;
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scale=no">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/login.js"></script>
+    <style>
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px #262333 inset !important;
+                -webkit-text-fill-color: rgba(255,255,255,1)!important;
+            }
+        
+        </style>
+</head>
+<body>
+<div class="login-index">
+    <div class="log-logo">
+        <a href="index.html"></a>
+    </div>
+    <div class="log-index">
+        <div class="index-left">
+            <input type="text" class="login-uname input-box input-number" placeholder="您的用户名"/>
+            <input type="password" class="login-upwd input-box input-pwd" placeholder="您的密码"/>
+            <a href="#" class="forget-pwd">忘记密码</a>
+            <button class="btn-login">登录</button>
+            <div class="login-other">
+                <span class="log-other">用合作网站账户直接登录</span>
+                <a href="#"><span class="log-wb"></span>新浪微博</a>
+                <a href="#"><span class="log-qq"></span>QQ</a>
+                <a href="#"><span class="log-wx"></span>微信</a>
+            </div>
+        </div>
+        <div class="index-right">
+            <span class="mfw-ewm"></span>
+            <span class="tips-font">扫一扫</span>
+            <span class="tips-font">下载马蜂窝APP</span>
+        </div>
+    </div>
+    <div class="tips">
+        <p>还没有账号?<a href="regist.html">马上注册</a></p>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var i = Math.round(Math.random()*20);
+    var body=document.getElementsByTagName("body");
+    $(body).css("background-image",`url(http://127.0.0.1:3000/bg-image/${i}.jpg)`);
+</script>

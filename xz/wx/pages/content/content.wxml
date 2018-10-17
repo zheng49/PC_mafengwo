@@ -1,0 +1,37 @@
+<!--pages/content/content.wxml-->
+<!--图片轮播 ajax-->
+
+<!--事件处理-->
+<view class="cell-item arrow">
+     <view class="father" data-age="19" bindtap="fatherTapHandle">
+        父元素  
+	<view class="son" data-index="1" catchtap="sonTapHandle">子元素1</view>
+	<view class="son" data-index="2" catchtap="sonTapHandle">子元素2</view>
+     </view>
+</view>
+
+<view bindtap="jump1" data-idx="123">jj..jj</view>
+<!--数据绑定-->
+<view>{{message}}</view>
+<view>{{uname}}</view>
+<!--条件渲染-->
+<view wx:if="{{view == 'app'}}">app</view>
+<view wx:elif="{{view == 'login'}}">login</view>
+<view wx:else="{{view == 'node'}}">node</view>
+<!--渲染复选框-->
+<checkbox checked="{{false}}"></checkbox>
+<!--渲染列表-->
+<view wx:for="{{rows}}" wx:key="{{index}}">
+   <text>{{item +'_'+ index}}</text>
+</view>
+<!--练习:渲染列表-->
+<view wx:for="{{list}}" wx:key="{{id}}">
+   <text>{{item.id}}</text>
+   <text>{{item.name}}</text>
+</view>
+<view wx:for="{{datas}}" wx:key="{{id}}">
+   <text>{{item.id + "_" + item.name}}</text>
+</view>
+
+
+

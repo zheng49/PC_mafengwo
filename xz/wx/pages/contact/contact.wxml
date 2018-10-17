@@ -1,0 +1,45 @@
+<!--pages/contact/contact.wxml-->
+<view class="divider"></view>
+<view class="cell">
+  <form  bindsubmit="useSubmit">
+  <navigator class="cell-item arrow">
+     <text>表单输入框</text>
+  </navigator>
+  <view class="cell-item">
+     <input type="text" name="uname" placeholder="用户名"></input>
+  </view>
+  <view class="cell-item">
+     <input type="text" name="upwd" password placeholder="密码"></input>
+  </view>
+  <view class="cell-item">
+     <input type="number" name="uage" placeholder="年龄"></input>
+  </view>
+  <view class="cell-item">
+     <button formType="submit">注册</button>
+  </view>
+  </form>
+</view>
+
+<view class="divider"></view>
+<view class="cell">
+  <navigator class="cell-item arrow">
+     <text>其它表单的组件</text>
+  </navigator>
+  <view class="cell-item">
+     <checkbox-group>
+      <checkbox color="#f60" checked></checkbox>
+      <checkbox color="#f60"></checkbox>
+     </checkbox-group>
+  </view>
+  <view class="cell-item">
+     <radio-group bindchange="radioChange" data-par="参数">
+      <radio color="#fc0" name="r" checked value="male"></radio>男
+      <radio color="#fc0" name="r" value="femal"></radio>女
+     </radio-group>
+  </view>
+  <view class="cell-item">
+    <switch color="#fc0" checked />
+    <switch color="#fc0"/>
+  </view>
+
+</view>

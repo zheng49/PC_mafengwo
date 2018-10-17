@@ -1,0 +1,52 @@
+/<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scale=no">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="login-index">
+    <div class="log-logo">
+        <a href="index.html"></a>
+    </div>
+    <div class="reg-index">
+        <div class="index-left">
+        <form action="/user/regist" method="post">
+            <input type="text" class="input-box" placeholder="请输入您的用户名" name="uname"/>
+            <input type="password" class="input-box" placeholder="请设置您的密码" name="upwd" style="background-color:#fff"/>
+            <input type="submit" class="btn-login mb-2" value="立即注册">
+        </form>
+            <p class="reg-tips">注册视为同意
+                <a href="#" class="user-rule">《马蜂窝用户使用协议》</a></p>
+            <div class="login-other">
+                <span class="log-other">用合作网站账户直接登录</span>
+                <a href="#"><span class="log-wb"></span>新浪微博</a>
+                <a href="#"><span class="log-qq"></span>QQ</a>
+                <a href="#"><span class="log-wx"></span>微信</a>
+            </div>
+        </div>
+        <div class="index-right">
+            <span class="mfw-ewm"></span>
+            <span class="tips-font">扫一扫</span>
+            <span class="tips-font">下载马蜂窝APP</span>
+        </div>
+    </div>
+    <div class="tips">
+        <p>已有账号?<a href="login.html">马上登录</a></p>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var i = Math.round(Math.random()*20);
+    var body=document.getElementsByTagName("body");
+    console.log(body+":"+i);
+    $(body).css("background-image",`url(http://127.0.0.1:3000/bg-image/${i}.jpg)`);
+</script>
